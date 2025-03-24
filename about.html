@@ -209,8 +209,17 @@
         <div class="row gy-3">
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <img src="GO.webp" alt="" class="img-fluid">
+          <img src="GO.webp" alt="" class="img-fluid" style="position: relative; top: 0; transition: all 0.3s ease;">
           </div>
+          
+          <style>
+            @media (max-width: 768px) {
+              .col-lg-6 img.img-fluid {
+                top: 20px; /* Adjust as needed to prevent overlap */
+              }
+            }
+          </style>
+
 
           <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
             <div class="about-content ps-0 ps-lg-3">
