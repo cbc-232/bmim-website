@@ -886,9 +886,13 @@
             <!-- Donation Methods Section -->
             <section class="glass p-6">
                 <h2 class="text-gray-900">Payment Methods</h2>
-                <div class="space-y-4">
+                <div class="space-y-6">
                     <div class="tabs">
-                        <div class="tab-list">                          
+                        <div class="tab-list">
+                            <div class="tab-item active" data-tab="card">
+                                <span class="icon icon-card"></span>
+                                <span>Card</span>
+                            </div>
                             <div class="tab-item" data-tab="paypal">
                                 <span class="icon icon-paypal"></span>
                                 <span>PayPal</span>
@@ -898,24 +902,34 @@
                                 <span>Mobile</span>
                             </div>
                         </div>
+
+                        <div class="tab-content active" id="tab-card">
+                            <div class="form-group">
+                                <label for="card-number">Card Number</label>
+                                <input type="text" id="card-number" placeholder="1234 5678 9012 3456">
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="form-group">
+                                    <label for="expiry">Expiry Date</label>
+                                    <input type="text" id="expiry" placeholder="MM/YY">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvc">CVC</label>
+                                    <input type="text" id="cvc" placeholder="123">
+                                </div>
+                            </div>
+                            <button class="btn btn-block mt-4">Donate Securely</button>
+                        </div>
+
                         <div class="tab-content" id="tab-paypal">
                             <div class="glass-dark p-6 text-center">
                                 <p class="mb-4 text-gray-700">
                                     You will be redirected to PayPal to complete your donation.
                                 </p>
-                                <form action="https://www.paypal.com/donate" method="post" target="_top">
-                                    <input type="hidden" name="hosted_button_id" value="B78RUTH6E2QUW" />
-                                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-                                    <img alt="" border="0" src="https://www.paypal.com/en_SL/i/scr/pixel.gif" width="1" height="1" />
-
-                                    <button class="btn btn-block" style="background-color: #0070ba;">
-                                        <span class="icon icon-paypal"></span>
-                                        Donate with PayPal
-                                    </button>
-                                </form>
-                                    
-                                 
-
+                                <button class="btn btn-block" style="background-color: #0070ba;">
+                                    <span class="icon icon-paypal"></span>
+                                    Donate with PayPal
+                                </button>
                             </div>
                         </div>
 
@@ -923,9 +937,7 @@
                             <div class="glass-dark p-6 text-center">
                                 <div class="qr-code mb-4">
                                     <div class="qr-code-inner">
-                                        <span class="icon icon-qr" style="width: 100px; height: 100px;">
-                                            <img src="Orange Money QR code.jpeg" alt="PayPal QR Code" style="width: 100%; height: 100%;">
-                                        </span>
+                                        <span class="icon icon-qr" style="width: 100px; height: 100px;"></span>
                                     </div>
                                 </div>
                                 <p class="text-gray-700 mb-4">
@@ -933,20 +945,19 @@
                                 </p>
                                 <div class="text-left space-y-2">
                                     <p class="font-medium">Mobile Money Options:</p>
-                                    <p class="text-sm">Orange Money: +232 78-614-790</p>
-                                    <p class="text-sm">AfriMoney: +232 99-222-204</p>
-                                    <p class="text-sm">QMoney: +232 31-861-995</p>
+                                    <p class="text-sm">Orange Money: +232 76-000-000</p>
+                                    <p class="text-sm">AfriMoney: +232 77-000-000</p>
+                                    <p class="text-sm">QMoney: +232 31-000-000</p>
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
                     <div class="glass-dark p-4">
                         <h3 class="mb-2 font-medium">Other ways to donate</h3>
                         <div class="space-y-2">
                             <button class="btn btn-outline btn-block text-left">
-                                Donate via GoFundMe (Our GoFundMe page is currently under construction)
+                                Donate via GoFundMe
                             </button>
                         </div>
                     </div>
